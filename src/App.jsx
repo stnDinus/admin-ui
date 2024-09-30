@@ -28,6 +28,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <small>
+        Steven Nugraha - A11.2022.14433
+      </small>
     </>
   )
 }
