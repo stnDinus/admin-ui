@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/jsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES6",
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
