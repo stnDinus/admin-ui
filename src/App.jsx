@@ -11,26 +11,30 @@ const App = () => {
     {
       path: "/",
       element: <DashboardPage />,
-      errorElement: <ErrorRoute />
+      errorElement: <ErrorRoute />,
     },
     {
       path: "/login",
-      element: <SignInPage />
+      element: <SignInPage />,
     },
     {
       path: "/register",
-      element: <SignUpPage />
+      element: <SignUpPage />,
     },
     {
       path: "/forgot-password",
-      element: <ForgotPasswordPage />
+      element: <ForgotPasswordPage />,
     },
     {
       path: "/balance",
-      element: <BalancePage />
-    }
-  ])
-  return <RouterProvider router={router} />
+      element: <BalancePage />,
+    },
+    {
+      path: "/expenses",
+      // element:
+    },
+  ]);
+  return <RouterProvider router={router} />;
 };
 
 export default App;
