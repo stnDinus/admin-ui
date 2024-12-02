@@ -116,7 +116,7 @@ const DashboardPage = () => {
                   <button
                     key={tab}
                     className={
-                      activeTab
+                      activeTab === tab
                         ? "px-4 font-bold border-b-4 border-primary text-primary"
                         : "px-4 font-bold text-gray-01"
                     }
