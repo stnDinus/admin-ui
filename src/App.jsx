@@ -1,14 +1,15 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import SignUpPage from "./pages/SignUp";
-import SignInPage from "./pages/SignIn";
-import ErrorRoute from "./errorRoute";
-import ForgotPasswordPage from "./pages/ForgotPassword";
+import SignInPage from "./pages/signIn";
+import SignUpPage from "./pages/signUp";
+import ErrorRoute from "./pages/errorRoute";
+import ForgotPasswordPage from "./pages/forgotPassword";
 import DashboardPage from "./pages/dashboard";
 import BalancePage from "./pages/balance";
-import ExpensesPage from "./pages/expenses";
+import GoalPage from "./pages/goal";
+import ExpensePage from "./pages/expense";
 
 const App = () => {
-  const router = createBrowserRouter([
+  const myRouter = createBrowserRouter([
     {
       path: "/",
       element: <DashboardPage />,
@@ -31,11 +32,20 @@ const App = () => {
       element: <BalancePage />,
     },
     {
-      path: "/expenses",
-      element: <ExpensesPage />,
+      path: "/goal",
+      element: <GoalPage />,
+    },
+    {
+      path: "/expense",
+      element: <ExpensePage />,
     },
   ]);
-  return <RouterProvider router={router} />;
+
+  return (
+    <>
+      <RouterProvider router={myRouter} />
+    </>
+  );
 };
 
 export default App;

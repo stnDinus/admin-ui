@@ -7,18 +7,19 @@ const BalancePage = () => {
       {/* top content start*/}
       <div className="md:grid md:grid-cols-3 md:gap-x-6">
         <Card title="Balances" />
-        <Card title="&nbsp;" />
         <Card
           title="&nbsp;"
-          desc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque in tempora voluptatem reprehenderit earum accusantium placeat quo error animi quasi veniam autem, minima et, nostrum, quidem quibusdam esse eveniet odio!"
+          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolore sapiente suscipit nam, vel officia ipsam praesentium earum unde provident nisi corrupti sit? Officia minima maxime magni quaerat id exercitationem."
         />
+        <Card
+          title="&nbsp;"
+          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolore sapiente suscipit nam, vel officia ipsam praesentium earum unde provident nisi corrupti sit? Officia minima maxime magni quaerat id exercitationem."
+        />
+        <Card desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolore sapiente suscipit nam, vel officia ipsam praesentium earum unde provident nisi corrupti sit? Officia minima maxime magni quaerat id exercitationem." />
+        <Card />
+        <Card />
       </div>
       {/* bottom content end*/}
-      <div className="md:grid md:grid-cols-3 md:gap-6">
-        <Card desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores iste praesentium totam doloremque eius veritatis tempora rerum, tenetur, dolorum consequuntur aperiam cupiditate sunt unde, aut perspiciatis qui tempore nulla impedit!" />
-        <Card />
-        <Card />
-      </div>
     </MainLayout>
   );
 };
