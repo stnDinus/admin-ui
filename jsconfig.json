@@ -1,6 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/jsconfig.json",
   "compilerOptions": {
+    "checkJs": true,
+    "jsx": "react-jsx",
     "module": "CommonJS",
     "target": "ES6"
   },
