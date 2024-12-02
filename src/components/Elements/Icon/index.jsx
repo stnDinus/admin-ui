@@ -256,6 +256,27 @@ const ArrowUpRightIcon = () => (
   </IconWrapper>
 );
 
+const ArrowRightIcon = () => (
+  <IconWrapper>
+    <g opacity="0.5">
+      <path
+        d="M3 12L22 12"
+        stroke="#9F9F9F"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M15 5L22 12L15 19"
+        stroke="#9F9F9F"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </g>
+  </IconWrapper>
+);
+
 export const Icon = {
   Overview: OverviewIcon,
   Balance: BalanceIcon,
@@ -267,4 +288,5 @@ export const Icon = {
   Logout: LogoutIcon,
   KebabMenu: KebabMenuIcon,
   ArrowUpRight: ArrowUpRightIcon,
+  ArrowRight: ArrowRightIcon,
 };
