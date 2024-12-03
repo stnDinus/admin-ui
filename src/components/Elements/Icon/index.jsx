@@ -313,6 +313,62 @@ const OthersIcon = () => (
   </IconWrapper>
 );
 
+const ArrowUpIcon = () => (
+  <IconWrapper>
+    <path
+      d="M8 12.6667V3.33334"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M3.33334 8.00001L8.00001 3.33334L12.6667 8.00001"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </IconWrapper>
+);
+
+const ArrowDownIcon = () => (
+  <IconWrapper>
+    <path
+      d="M8 2.33325V11.6666"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M12.6666 7L7.99992 11.6667L3.33325 7"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </IconWrapper>
+);
+
+const HousingIcon = () => (
+  <IconWrapper>
+    <path
+      d="M10.3333 5V6.78421L12 7.83421V6.57895H20.3333V18.4211H16.1667V20H22V5H10.3333ZM8.25 7.36842L2 11.3158V20H14.5V11.3158L8.25 7.36842ZM13.6667 8.15789V8.89211L15.0083 9.73684H15.3333V8.15789H13.6667ZM17 8.15789V9.73684H18.6667V8.15789H17ZM8.25 9.34211L12.8333 12.1053V18.4211H10.3333V13.6842H6.16667V18.4211H3.66667V12.1053L8.25 9.34211ZM17 11.3158V12.8947H18.6667V11.3158H17ZM17 14.4737V16.0526H18.6667V14.4737H17Z"
+      fill="currentColor"
+    />
+  </IconWrapper>
+);
+
+const EntertainmentIcon = () => (
+  <IconWrapper>
+    <path
+      d="M14.75 7.45999L12 3.92999L13.97 3.53999L16.71 7.06999L14.75 7.45999ZM21.62 6.09999L20.84 2.17999L16.91 2.95999L19.65 6.49999L21.62 6.09999ZM11.81 8.04999L9.07001 4.49999L7.10001 4.90999L9.85001 8.43999L11.81 8.04999ZM4.16001 5.49999L3.18001 5.68999C2.92241 5.74079 2.67737 5.84194 2.45894 5.98764C2.24051 6.13334 2.05299 6.32072 1.90713 6.53904C1.76127 6.75737 1.65994 7.00234 1.60896 7.2599C1.55797 7.51747 1.55833 7.78257 1.61001 8.03999L2.00001 9.99999L6.90001 9.02999L4.16001 5.49999ZM4.00001 20V12H20V13.09C20.72 13.21 21.39 13.46 22 13.81V9.99999H2.00001V20C2.00001 20.5304 2.21073 21.0391 2.5858 21.4142C2.96087 21.7893 3.46958 22 4.00001 22H13.81C13.46 21.39 13.22 20.72 13.09 20H4.00001ZM21.34 15.84L17.75 19.43L16.16 17.84L15 19L17.75 22L22.5 17.25L21.34 15.84Z"
+      fill="currentColor"
+    />
+  </IconWrapper>
+);
+
 export const Icon = {
   Overview: OverviewIcon,
   Balance: BalanceIcon,
@@ -325,6 +381,10 @@ export const Icon = {
   KebabMenu: KebabMenuIcon,
   ArrowUpRight: ArrowUpRightIcon,
   ArrowRight: ArrowRightIcon,
+  ArrowDown: ArrowDownIcon,
+  ArrowUp: ArrowUpIcon,
+  Entertainment: EntertainmentIcon,
+  Housing: HousingIcon,
   Shopping: ShoppingIcon,
   Food: FoodIcon,
   Transportation: TransportationIcon,
