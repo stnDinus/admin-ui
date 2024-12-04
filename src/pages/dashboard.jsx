@@ -4,6 +4,7 @@ import CardBalance from "../components/Fragments/CardBalance";
 import CardBill from "../components/Fragments/Dashboard/CardBill";
 import CardTransaction from "../components/Fragments/Dashboard/CardTransaction";
 import CardExpenseBreakdown from "../components/Fragments/Dashboard/CardExpenseBreakdown";
+import CardStatistic from "../components/Fragments/Dashboard/CardSatistic";
 
 const DashboardPage = () => {
   return (
@@ -17,7 +18,7 @@ const DashboardPage = () => {
         />
         <CardBill />
         <CardTransaction />
-        <Card variant="md:col-span-2" title="Statistics" />
+        <CardStatistic />
         <CardExpenseBreakdown />
       </div>
       {/* bottom content end*/}
