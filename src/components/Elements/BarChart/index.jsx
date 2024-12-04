@@ -28,7 +28,12 @@ export default function BarsDataset(props) {
     <BarChart
       dataset={desc.data}
       xAxis={[
-        { scaleType: "band", dataKey: desc.dataKey, categoryGapRatio: 0.5 },
+        {
+          scaleType: "band",
+          dataKey: desc.dataKey,
+          // @ts-expect-error https://github.com/mui/mui-x/issues/10334
+          categoryGapRatio: 0.5,
+        },
       ]}
       series={desc.series}
       slotProps={{
