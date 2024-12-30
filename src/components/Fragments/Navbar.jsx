@@ -117,8 +117,8 @@ const Navbar = () => {
               to={menu.link}
               className={({ isActive }) =>
                 isActive
-                  ? "flex bg-primary text-white font-bold px-4 py-3 rounded-md"
-                  : "flex hover:bg-special-bg3 hover:text-white px-4 py-3 rounded-md"
+                  ? "flex bg-primary text-white font-bold px-4 py-3 rounded-md zoom-in"
+                  : "flex hover:bg-special-bg3 hover:text-white px-4 py-3 rounded-md zoom-in"
               }
             >
               <div className="mx-auto sm:mx-0">{menu.icon}</div>
@@ -131,7 +131,7 @@ const Navbar = () => {
           {themes.map((t) => (
             <div
               key={t.name}
-              className={`${t.bgcolor} md:w-6 h-6 rounded-md cursor-pointer mb-2`}
+              className={`${t.bgcolor} md:w-6 h-6 rounded-md cursor-pointer mb-2 zoom-in`}
               onClick={() => setTheme(t)}
             ></div>
           ))}
@@ -139,7 +139,7 @@ const Navbar = () => {
         <div>
           <NavLink
             onClick={Logout}
-            className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white"
+            className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white zoom-in"
           >
             <div className="mx-auto sm:mx-0">
               <Icon.Logout />
