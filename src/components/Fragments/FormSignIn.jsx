@@ -3,14 +3,16 @@ import Button from "../Elements/Button";
 import CheckBox from "../Elements/CheckBox";
 import LabeledInput from "../Elements/LabeledInput";
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import CustomizedSnackbars from "../Elements/SnackBar";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/authContext";
 
 const FormSignIn = () => {
   const [msg, setMsg] = useState(null);
   const [open, setOpen] = useState(true);
+  const { setIsLoggedIn, setName } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -36,6 +38,9 @@ const FormSignIn = () => {
       setMsg({ severity: "success", desc: "Login Success" });
 
       localStorage.setItem("refreshToken", response.data.refreshToken);
+
+      setIsLoggedIn(true);
+      setName(decoded["name"]);
 
       navigate("/");
     } catch (error) {
