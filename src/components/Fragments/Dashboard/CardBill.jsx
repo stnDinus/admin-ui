@@ -1,8 +1,31 @@
-import bills from "../../../data/bills";
+import axios from "axios";
 import Card from "../../Elements/Card";
+import { useEffect, useState } from "react";
 
 const CardBill = () => {
-  const billCard = bills.map((bill) => (
+  const [bills, setBills] = useState(null);
+
+  const getData = async () => {
+    const refreshToken = localStorage.getItem("refreshToken");
+
+    const response = await axios.get(
+      "https://jwt-auth-eight-neon.vercel.app/bills",
+      {
+        headers: {
+          Authorization: `Bearer ${refreshToken}`,
+        },
+      },
+    );
+
+    const data = response.data.data;
+    setBills(data);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const billCard = bills?.map((bill) => (
     <div key={bill.id} className="lg:flex justify-between pt-3 pb-3">
       <div className="flex">
         <div className="bg-special-bg me-3 px-4 rounded-lg flex place-content-center flex-col">
