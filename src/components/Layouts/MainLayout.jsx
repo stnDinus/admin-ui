@@ -19,7 +19,7 @@ const MainLayout = (props) => {
       {/* navbar start*/}
       <Navbar />
       {/* navbar end*/}
-      <div className="w-screen">
+      <div className="w-screen bg-white dark:bg-defaultBlack">
         {isLoading && (
           <SimpleBackdrop isLoading={isLoading} setIsLoading={setIsLoading} />
         )}

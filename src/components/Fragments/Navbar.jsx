@@ -6,6 +6,8 @@ import { ThemeContext } from "../../context/themeContext";
 import { AuthContext } from "../../context/authContext";
 import axios from "axios";
 import { NotifContext } from "../../context/notifContext";
+import { DarkModeContext } from "../../context/darkModeContext";
+import { Switch } from "@mui/material";
 
 const Navbar = () => {
   const themes = [
@@ -19,6 +21,7 @@ const Navbar = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const { setIsLoggedIn, setName, name } = useContext(AuthContext);
   const { setMsg, setOpen, setIsLoading } = useContext(NotifContext);
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
   const navigate = useNavigate();
 
@@ -136,7 +139,11 @@ const Navbar = () => {
             ></div>
           ))}
         </div>
-        <div>
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center justify-between bg-special-bg3 px-4 py-1.5 rounded-md">
+            Dark Mode
+            <Switch checked={darkMode} onClick={() => setDarkMode(!darkMode)} />
+          </div>
           <NavLink
             onClick={Logout}
             className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white zoom-in"
