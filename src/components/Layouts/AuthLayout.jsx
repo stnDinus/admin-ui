@@ -5,11 +5,15 @@ import { NotifContext } from "../../context/notifContext";
 import SimpleBackdrop from "../Elements/Backdrop";
 import CustomizedSnackbars from "../Elements/SnackBar";
 import { motion } from "motion/react";
+import { DarkModeContext } from "../../context/darkModeContext";
+import { IconButton } from "@mui/material";
+import BrightnessMediumIcon from "@mui/icons-material/BrightnessMedium";
 
 const AuthLayout = (props) => {
   const { children, type } = props;
   const { msg, open, setOpen, isLoading, setIsLoading } =
     useContext(NotifContext);
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
   return (
     <>
@@ -32,7 +36,7 @@ const AuthLayout = (props) => {
           scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
         }}
       >
-        <div className="flex justify-center min-h-screen items-center bg-special-mainBg">
+        <div className="flex dark:bg-defaultBlack dark:text-white justify-center min-h-screen items-center bg-special-mainBg">
           {/* container start */}
           <div className="w-full max-w-sm">
             {/* logo start */}
@@ -190,6 +194,21 @@ const AuthLayout = (props) => {
           {/* container end */}
         </div>
       </motion.div>
+      <IconButton
+        onClick={() => setDarkMode(!darkMode)}
+        color="default"
+        sx={{
+          position: "fixed",
+          bottom: "1em",
+          right: "1em",
+        }}
+      >
+        <BrightnessMediumIcon
+          sx={{
+            color: darkMode && "white",
+          }}
+        />
+      </IconButton>
     </>
   );
 };
