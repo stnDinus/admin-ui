@@ -71,3 +71,27 @@ describe("User login", () => {
     cy.get("div").contains("Invalid email address format");
   });
 });
+
+describe("Authenticated visit", () => {
+  before("login", () => {
+    cy.visit("http://localhost:5173/login");
+
+    cy.get("input#email").type("hello@example.com");
+
+    cy.get("input#password").type("123456");
+
+    cy.get("button").contains("Login").click();
+
+    cy.get("nav");
+  });
+
+  it("should allow an autenticated user to view overview page dashboard", () => {
+    cy.visit("http://localhost:5173/");
+
+    cy.get("nav")
+      .get("a")
+      .contains("Overview")
+      .parent()
+      .should("have.class", "bg-primary");
+  });
+});
