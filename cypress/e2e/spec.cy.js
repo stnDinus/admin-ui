@@ -1,8 +1,8 @@
-describe('Access', () => {
-  it('passes', () => {
-    cy.visit('http://localhost:5173')
-  })
-})
+describe("Access", () => {
+  it("passes", () => {
+    cy.visit("http://localhost:5173");
+  });
+});
 
 describe("User login", () => {
   it("should allow user to log in with valid credentials", () => {
